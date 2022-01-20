@@ -67,7 +67,7 @@
   border-radius: 5px;
   margin-top: 10px;
   align-items: center;
-  &:not(.complete) {
+  &:not(.completed) {
     cursor: pointer;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
     &:active {
@@ -81,8 +81,7 @@
       }
     }
   }
-  &.completed
-  .task-text{
+  &.completed .task-text{
     text-decoration: line-through;
     opacity: 0.8;
   }
