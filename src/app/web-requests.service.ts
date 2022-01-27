@@ -16,15 +16,15 @@ export class WebRequestsService {
   }
 
   postUri(uri: string, payload: Object) {
-    return this.http.get(`${this.ROOT_URL}/${uri}`, payload);
+    return this.http.post(`${this.ROOT_URL}/${uri}`, payload);
   
   }
 
   patchUri(uri: string, payload: Object) {
-    return this.http.get(`${this.ROOT_URL}/${uri}`, payload);
+    return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
   }
 
   deleteUri(uri: string) {
-    return this.http.get(`${this.ROOT_URL}/${uri}`);
+    return this.http.delete(`${this.ROOT_URL}/${uri}`);
   }
 }
