@@ -15,4 +15,8 @@ export class TaskService {
   getLists() {
     return this.webReqService.getUri('lists');
   }
+
+  getTasks(listId: string) {
+    return this.webReqService.getUri(`lists/${listId}/tasks`);
+  }
 }
