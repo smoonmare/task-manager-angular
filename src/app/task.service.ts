@@ -11,4 +11,8 @@ export class TaskService {
   createList(title: string) {
     return this.webReqService.postUri('lists', { title });
   }
+
+  getLists() {
+    return this.webReqService.getUri('lists');
+  }
 }

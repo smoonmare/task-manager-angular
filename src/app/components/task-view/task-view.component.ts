@@ -8,6 +8,7 @@ import { TaskService } from 'src/app/task.service';
   styleUrls: ['./task-view.component.scss']
 })
 export class TaskViewComponent implements OnInit {
+  lists: any;
 
   constructor(private taskService: TaskService, private route: ActivatedRoute, private router: Router) { }
 
@@ -17,5 +18,8 @@ export class TaskViewComponent implements OnInit {
         console.log(params);
       }
     )
+    this.taskService.getLists().subscribe((lists: any) => {
+      console.log(lists);
+    })
   }
 }
